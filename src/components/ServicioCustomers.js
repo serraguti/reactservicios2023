@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 //IMPORTAMOS LA LIBRERIA DE AXIOS
 import axios from 'axios';
+import Global from '../Global';
 
 export default class ServicioCustomers extends Component {
     //NECESITAMOS UNA URL DE ACCESO AL SERVICIO API
-    urlApiCustomers = "https://northwind.netcore.io/customers.json";
+    urlApiCustomers = Global.urlApiCustomers;
 
     //NECESITAMOS ALMACENAR, DENTRO DE state, UN CONJUNTO
     //DE OBJETOS CUSTOMERS
@@ -16,7 +17,8 @@ export default class ServicioCustomers extends Component {
     //SERVICIO API
     loadCustomers = () => {
         console.log("Loading Customers....");
-        axios.get(this.urlApiCustomers).then(response => {
+        var request = "customers.json";
+        axios.get(this.urlApiCustomers + request).then(response => {
             //console.log(response.data);
             this.setState({
                 customers: response.data.results

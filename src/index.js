@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ServicioCustomers from './components/ServicioCustomers';
+import BuscadorCustomer from './components/BuscadorCustomer';
+import BuscadorCoches from './components/BuscadorCoches';
+import DepartamentosEmpleados from './components/DepartamentosEmpleados';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ServicioCustomers />
+    <DepartamentosEmpleados />
   </React.StrictMode>
 );
 
